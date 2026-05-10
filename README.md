@@ -30,16 +30,24 @@ ecommerce-analytics/
 ```
 
 ---
-## Reproducing the database
+## Reproducing the database and CSV files
 
-`data/processed/ecommerce.db` is not committed to this repo (exceeds
-GitHub's 100MB file size limit). To recreate it locally:
+The following files under `data/processed` are not committed to this repo (exceeds
+GitHub's 100MB file size limit):
+
+1. `ecommerce.db` 
+2. `master_orders.csv`
+3. `fact_orders.csv`
+4. `dim_customers.csv`
+5.  `rfm_scores.csv`
+
+ To recreate these files locally:
 
 1. Download the Olist dataset from Kaggle and place CSVs in `data/raw/`
 2. Run `notebooks/01_eda.ipynb`
 3. Run `notebooks/02_feature_engineering.ipynb`
 
-The notebook will automatically generate `ecommerce.db` in `data/processed/`.
+The notebook will automatically generate `ecommerce.db` , `master_orders.csv`, `fact_orders.csv`, `dim_customers.csv` and `rfm_scores.csv` in `data/processed/`.
 
 ---
 
