@@ -30,6 +30,18 @@ ecommerce-analytics/
 ```
 
 ---
+## Reproducing the database
+
+`data/processed/ecommerce.db` is not committed to this repo (exceeds
+GitHub's 100MB file size limit). To recreate it locally:
+
+1. Download the Olist dataset from Kaggle and place CSVs in `data/raw/`
+2. Run `notebooks/01_eda.ipynb`
+3. Run `notebooks/02_feature_engineering.ipynb`
+
+The notebook will automatically generate `ecommerce.db` in `data/processed/`.
+
+---
 
 ## Key Findings
 
