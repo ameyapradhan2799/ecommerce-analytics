@@ -1,9 +1,17 @@
-# Data files (too large for GitHub)
+# Raw data (too large, download from Kaggle)
 data/raw/
-*.csv
-*.xlsx
 
-# Python cache
+# Generated database
+*.db
+*.sqlite
+
+# Large processed files
+data/processed/master_orders.csv
+data/processed/fact_orders.csv
+data/processed/dim_customers.csv
+data/processed/rfm_scores.csv
+
+# Python
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
@@ -11,10 +19,3 @@ __pycache__/
 # Environment
 .env
 venv/
-
-# Database files (too large for GitHub)
-*.db
-*.sqlite
-
-# Large processed files
-data/processed/ecommerce.db
