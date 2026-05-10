@@ -43,6 +43,8 @@ ecommerce-analytics/
 | Late delivery rate | ~8% |
 | Top state by orders | São Paulo (SP) |
 
+**Dataset characteristic:** 96.7% of Olist customers placed exactly one order during the observation period (Sep 2016 – Sep 2018). This is consistent with published research on Brazilian e-commerce marketplaces. As a result, RFM frequency scoring used a threshold-based approach (1 order = score 1, 2 orders = score 2, etc.) rather than standard quintile binning, which is the statistically correct method for sparse transaction data.
+
 ---
 
 ## Hypothesis Testing

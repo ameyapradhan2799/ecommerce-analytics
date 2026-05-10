@@ -11,3 +11,10 @@ __pycache__/
 # Environment
 .env
 venv/
+
+# Database files (too large for GitHub)
+*.db
+*.sqlite
+
+# Large processed files
+data/processed/ecommerce.db
