@@ -104,20 +104,43 @@ Built an executive dashboard with KPI cards (revenue, AOV, churn %, late deliver
 # 1. Clone the repo
 git clone https://github.com/YOUR_USERNAME/ecommerce-analytics.git
 cd ecommerce-analytics
-
+ 
 # 2. Install dependencies
 pip install pandas numpy matplotlib seaborn scipy scikit-posthocs sqlalchemy jupyter
-
-# 3. Download dataset
-# Go to https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
-# Place all CSVs in data/raw/
-
+ 
+# 3. Download dataset from Kaggle
+# https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+# Place all 9 CSVs in data/raw/
+ 
 # 4. Run notebooks in order
-# 01_eda.ipynb → 02_feature_engineering.ipynb → 03_hypothesis_testing.ipynb
-
-# 5. Open dashboard
+#    01_eda.ipynb                → creates data/processed/master_orders.csv
+#    02_feature_engineering.ipynb → creates ecommerce.db, fact_orders.csv, dim_customers.csv
+ 
+# 5. Run SQL (optional)
+# Install SQLite by alexcvzz in VSCode
+# Open data/processed/ecommerce.db
+# Paste queries from sql/rfm_segmentation.sql
+ 
+# 6. Open Power BI dashboard
 # Open dashboard/ecommerce_dashboard.pbix in Power BI Desktop
+# Data source: point to data/processed/fact_orders.csv and dim_customers.csv
 ```
+
+---
+
+## SQL Concepts Demonstrated
+ 
+The `rfm_segmentation.sql` file contains 9 queries showcasing:
+ 
+- `GROUP BY` with multiple aggregation functions
+- `JOIN` across 4+ tables
+- `WITH` (Common Table Expressions / CTEs) — multi-step logic
+- `WINDOW FUNCTIONS` — `SUM() OVER`, `LAG()`, `ROW_NUMBER()`, `RANK()`, `PARTITION BY`
+- `CASE WHEN` for conditional segmentation
+- `SUBQUERIES` in `FROM` and `LEFT JOIN`
+- `HAVING` for post-aggregation filtering
+- `VIEWS` for reusable saved queries
+- `INDEXES` for query performance
 
 ---
 
