@@ -71,14 +71,14 @@ The notebook will automatically generate `ecommerce.db` , `master_orders.csv`, `
 
 Four business hypotheses were tested using industry-standard non-parametric statistical methods (α = 0.05). Non-parametric tests were chosen because review scores (ordinal) and revenue data (right-skewed) do not meet the normality assumption required for t-tests and ANOVA.
 
-| # | Hypothesis | Test | Result | Key Finding |
-|---|-----------|------|--------|-------------|
-| H1 | Mean review score of late deliveries = mean review score of on-time deliveries | Mann-Whitney U | **H₀ Rejected** | Late orders score ~0.4 pts lower on average (p < 0.05) |
-| H2 | Mean order value is the same across all payment types | Kruskal-Wallis + Dunn post-hoc | **H₀ Rejected** | Credit card users spend ~40% more than boleto users (p < 0.05) |
-| H3 | Review score distribution is independent of product category | Chi-square + Cramér's V | **H₀ Rejected** | Category and satisfaction are related; Cramér's V ≈ 0.08 (small but real effect) |
-| H4 | Mean delivery time for weekend orders = mean delivery time for weekday orders | Mann-Whitney U | **H₀ Rejected** | Weekend orders take ~1 extra day on average (p < 0.05) |
+| # | Null Hypothesis | Test | Result | Key Finding |
+|---|-----------------|------|--------|-------------|
+| 1 | Mean review score of late deliveries = mean review score of on-time deliveries | Mann-Whitney U | **H₀ Rejected** | Late orders score ~0.4 pts lower on average (p < 0.05) |
+| 2 | Mean order value is the same across all payment types | Kruskal-Wallis + Dunn post-hoc | **H₀ Rejected** | Credit card users spend ~40% more than boleto users (p < 0.05) |
+| 3 | Review score distribution is independent of product category | Chi-square + Cramér's V | **H₀ Rejected** | Category and satisfaction are related; Cramér's V ≈ 0.08 (small but real effect) |
+| 4 | Mean delivery time for weekend orders = mean delivery time for weekday orders | Mann-Whitney U | **Failed to Reject Ho** | Weekend and weekday order delivery times show no statistically significant difference|
 
-> All four null hypotheses were rejected, confirming that delivery performance, payment behaviour, and product category are all statistically significant drivers of customer experience.
+> First 3 null hypotheses were rejected, confirming that delivery performance, payment behaviour, and product category are all statistically significant drivers of customer experience. Failed to reject the 4th null hypothesis, confirming that delivery time for weekend and weekday orders does not have any statistically significant difference, thereby reducing/avoiding additional expenses for planning logistics operations.
 
 ---
 
