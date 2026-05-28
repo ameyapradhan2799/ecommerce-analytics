@@ -94,7 +94,7 @@ Computed RFM scores (Recency, Frequency, Monetary), CLV estimates, churn flags (
 Tested four hypotheses using Mann-Whitney U, Kruskal-Wallis, and Chi-square tests from `scipy.stats`. Computed effect sizes (Cramér's V, rank-biserial correlation) alongside p-values to quantify practical significance, not just statistical significance.
 
 **Phase 4 — Power BI Dashboard**
-Built an executive dashboard with KPI cards (revenue, AOV, churn %, late delivery %), monthly trend chart, RFM segment breakdown, and state-level map. Slicers for category, state, and date range.
+Built an executive dashboard with KPI cards (revenue, AOV, churn %, late delivery %), monthly trend chart, RFM segment breakdown, and late delivert rate by state. Slicers for category, state, and date range.
 
 ---
 
@@ -147,3 +147,14 @@ The `rfm_segmentation.sql` file contains 9 queries showcasing:
 ## Skills Demonstrated
 
 `Pandas` `NumPy` `Matplotlib` `Seaborn` `SciPy` `Hypothesis Testing` `Mann-Whitney U` `Chi-square` `Kruskal-Wallis` `Effect Size` `SQL` `RFM Segmentation` `Power BI` `DAX` `ETL` `Data Cleaning` `EDA`
+
+## Dashboard preview
+
+### Page 1 — overview
+![Overview](data/processed/dashboard_overview.png)
+
+### Page 2 — customer analysis
+![Customer Analysis](data/processed/dashboard_customers.png)
+
+### Page 3 — operations & quality
+![Operations](data/processed/dashboard_operations.png)
